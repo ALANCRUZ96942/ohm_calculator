@@ -1,5 +1,15 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Finlandica&display=swap');
+
+.App {
+  font-family: 'Finlandica', sans-serif;
+  text-align: center;
+}
+
 .App {
   text-align: center;
+  background-color: #053B50;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -13,9 +23,16 @@
   }
 }
 
+h1 {
+  color: #74d2e7;
+}
+.extra-size {
+  font-size: 5rem;
+  padding-top: 15%;
+}
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+ 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,4 +52,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/*Buttons*/
+.btn-custom-main{
+  color: white;
+  background-color: #64CCC5;
+  width: 100%;
+  min-height: 4rem;
+}
+
+.btn-custom-main:hover{
+  background-color: white;
+  color: #64CCC5;
+}
+.arrow-svg{
+  max-width: 3rem;
 }
