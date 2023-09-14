@@ -1,26 +1,27 @@
 'use strict';
 const {
-  Model
+  Model,
+  DataTypes
 } = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class Resistor extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-    }
+const sequelize = require('../db')
+
+class Resistor extends Model {
+  /**
+   * Helper method for defining associations.
+   * This method is not a part of Sequelize lifecycle.
+   * The `models/index` file will call this method automatically.
+   */
+  static associate(models) {
+    // define association here
   }
-  Resistor.init({
-    nombre: DataTypes.STRING,
-    multipler: DataTypes.INTEGER,
-    color: DataTypes.STRING,
-    tolerance: DataTypes.INTEGER
-  }, {
-    sequelize,
-    modelName: 'Resistor',
-  });
-  return Resistor;
-};
+}
+Resistor.init({
+  name: DataTypes.STRING,
+  multipler: DataTypes.INTEGER,
+  color: DataTypes.STRING,
+  tolerance: DataTypes.INTEGER
+}, {
+  sequelize,
+  modelName: 'Resistor',
+});
+module.exports =  Resistor;

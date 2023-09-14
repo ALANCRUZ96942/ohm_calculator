@@ -8,6 +8,8 @@ dotenv.config()
 /*Set up the Express App*/
 const app = express();
 const PORT = process.env.PORT || 4000;
+const api = require("./routes/api")
+
 app.set('port', PORT);
 
 /*MIDDLEWARES*/
@@ -18,11 +20,12 @@ app.use(morgan("dev"));
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
     try {
-        sequelize.authenticate();
-        console.log('Connection has been established successfully.');
-      } catch (error) {
-        console.error('Unable to connect to the database:', error);
-      }
+     sequelize.sync({ force: false }); 
+      console.log('Database sync');
+    } catch (error) {
+      console.error('There was an error on database', error);
+    }
 
 });
 
+app.use('/api',api)
