@@ -1,2 +1,4 @@
 # Node js dependences
 /node_modules
+#env
+/.env
