@@ -9,17 +9,18 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      nombre: {
+      name: {
         type: Sequelize.STRING
       },
       multipler: {
-        type: Sequelize.INTEGER
+        type: Sequelize.FLOAT
       },
       color: {
         type: Sequelize.STRING
       },
       tolerance: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: true,
       },
       createdAt: {
         allowNull: false,
