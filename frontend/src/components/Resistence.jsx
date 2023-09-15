@@ -8,7 +8,6 @@ function Resistence() {
     const numBands = ['4','5'];
 
     function handleBand(a) {
-        console.log(a);
         setToleranceband(a);
     }
 

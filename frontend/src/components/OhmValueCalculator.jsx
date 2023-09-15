@@ -130,9 +130,7 @@ function OhmValueCalculator(props) {
         },
       };
       setDivStyles(newDivStyles);
-
-      
-      
+            
     }
     
    
@@ -147,26 +145,27 @@ function OhmValueCalculator(props) {
                 </div>
                 <div className='col-8'>
                     <div className='resistor d-flex justify-content-center'>
-                        <animated.select className="input-custom-select"  style={selectAnimation} onChange={(event) => handleColor(event.target.value,selectedButton)}>
-                        <option value="">Select a color</option>
+                    
+                        <animated.select className="input-custom-select" style={selectAnimation} onChange={(event) => handleColor(event.target.value,selectedButton)}>
+                        
                         {
-                        (selectedButton === props.tolerance ) ? 
-                            tolerances.map((color, index) => (
-                                <option key={index} value={JSON.stringify(color)}>
-                                    {color.name}
-                                </option>
-                            )) : (selectedButton === props.tolerance -1) ?
-                            mults.map((mult, index) => (
-                                <option key={index} value={JSON.stringify(mult)}>
-                                    {mult.name}
-                                </option>
+                            (selectedButton === props.tolerance ) ? 
+                                tolerances.map((tolerance, index) => (
+                                    <option key={index} value={JSON.stringify(tolerance)}>
+                                        {tolerance.name}
+                                    </option>
+                                )) : (selectedButton === props.tolerance -1) ?
+                                mults.map((mult, index) => (
+                                    <option key={index} value={JSON.stringify(mult)}>
+                                        {mult.name}
+                                    </option>
+                                ))
+                                : colors.map((color, index) => (
+                                    <option key={index} value={JSON.stringify(color)}>
+                                        {color.name}
+                                    </option>
                             ))
-                            : colors.map((color, index) => (
-                                <option key={index} value={JSON.stringify(color)}>
-                                    {color.name}
-                                </option>
-                        ))
-                    }
+                        }
                         </animated.select>
                         {numBands.map((item, index) => (
                             <div className='col-1 band' style={divStyles[index+1]} key={index} onClick={(event) => handleClick(event,index+1)}>
@@ -183,7 +182,7 @@ function OhmValueCalculator(props) {
 
             <div className='row pt-5'>
                 <h3 className='text-white'>
-                    {finalResult !== null? 'Resistence: '+finalResult+'Ω ± '+finalTolerance : ''}
+                    {finalResult !== null? 'Resistance: '+finalResult+'Ω ± '+finalTolerance : ''}
                 </h3>
             </div>
 
