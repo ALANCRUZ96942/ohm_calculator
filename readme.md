@@ -1,4 +1,9 @@
 # Ohm Calculator
+Ohm calculator is a web app and api developed on react (frontend) and node.js (backend) to calculate the electric resistance
+with a friendly interface.
+
+![image](https://github.com/ALANCRUZ96942/ohm_calculator/assets/65994761/7293c4c7-5e62-4fbf-a6e7-879afeb7c852)
+
 ## Clonning repository
 Clone the repository on your local:
 ```
