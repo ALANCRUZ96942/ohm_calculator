@@ -5,7 +5,10 @@
   "main": "server.js",
   "scripts": {
     "babel": "babel-node --presets=@babel/preset-env",
-    "dev": "nodemon --exec  npm run babel src/server.js"
+    "dev": "nodemon --exec  npm run babel src/server.js",
+    "migrate": "npx sequelize-cli  db:migrate ",
+    "seed": "npx sequelize-cli  db:seed",
+    "db": "migrate seed"
   },
   "keywords": [],
   "author": "",
