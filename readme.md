@@ -5,9 +5,9 @@ to calculate electric resistance with a user-friendly interface.
 ![image](https://github.com/ALANCRUZ96942/ohm_calculator/assets/65994761/7293c4c7-5e62-4fbf-a6e7-879afeb7c852)
 
 ## Previous requeriments
-Node.js: JavaScript execution engine.
-npm: Node.js package manager.
-Git: Version control system.
+  Node.js: JavaScript execution engine.
+  npm: Node.js package manager.
+  Git: Version control system.
 If it is your first time using npm, you need to run the following command instead of npm install in the next steps:
 ``` 
 npm install npm -g
@@ -35,7 +35,7 @@ npm install
 Ensure that your system has a supported database server installed (MySQL). 
 Create a new empty database for the project and specify the database name in the .env file.
 
-### configure the .env file 
+### Configure the .env file 
 You can modify the .env.example file by setting the DATABASE field to your database name. 
 You can use the .env.example file as a template and rename it to .env. 
 Configure the remaining parameters according to your server database settings. 
