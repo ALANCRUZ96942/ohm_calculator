@@ -17,7 +17,7 @@ function Navbar() {
         setnavClass('extra-size text-center text-light');
         break;
       case '/calculate':
-        setPageTitle('Calculate Resistance');
+        setPageTitle('Lets to calculate the electrical resistance');
         setnavClass('text-center text-light');
         break;
       default:
