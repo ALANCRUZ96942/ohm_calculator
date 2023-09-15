@@ -16,7 +16,7 @@ function Resistence() {
 
         <div className="row justify-content-center m-0 mt-5 pt-3 pb-5">
             <div className='col-12'>
-            <h3 className='text-white'>Select the number of bands (ussualy 4-5)</h3>
+            <h3 className='text-white'>Select the number of bands (usually 4-5)</h3>
             <animated.select className='input-custom-select' onChange={(e) => handleBand(e.target.value)}>
             {numBands.map((band, index) => (
                 <option key={index} value={`${band}`} > 
