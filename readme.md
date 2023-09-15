@@ -50,4 +50,5 @@ fiinaly run to start the frontend client
 ```
 npm start 
 ```
+And the app will run on REACT_APP_API_BASE_URL 
 
