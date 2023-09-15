@@ -168,10 +168,10 @@ function OhmValueCalculator(props) {
                         }
                         </animated.select>
                         {numBands.map((item, index) => (
-                            <div className='col-1 band' style={divStyles[index+1]} key={index} onClick={(event) => handleClick(event,index+1)}>
+                            <div className='col-1 band' data-testid={'band'+(index+1)} style={divStyles[index+1]} key={index} onClick={(event) => handleClick(event,index+1)}>
                             </div>    
                         ))}
-                        <div className='col-1 band' style={divStyles[props.tolerance]}  onClick={(event) => handleClick(event,props.tolerance)}>
+                        <div className='col-1 band' data-testid={'band'+(props.tolerance)} style={divStyles[props.tolerance]}  onClick={(event) => handleClick(event,props.tolerance)}>
                         </div>
                                 
                     </div>
