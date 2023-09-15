@@ -17,6 +17,8 @@ function OhmValueCalculator(props) {
 
     useEffect(() => {
         setfinalResult(null);
+        setfinalTolerance(null);
+        setValues(Array.from({ length: props.tolerance },  (_, index) => null));
         (function changeStyleOfClass (){
             const elements = document.querySelectorAll('.band'); 
             elements.forEach((element) => {
