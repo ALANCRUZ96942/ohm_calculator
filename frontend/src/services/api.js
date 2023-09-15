@@ -13,9 +13,17 @@ export const getResistorsByTolerance = async () => {
   }
 };
 
-export const getResistorsByColor = async () => {
+export const getResistorsByFigure = async () => {
     try {
       const response = await instance.get('api/resistors/colors');
+      return response.data;
+    } catch (error) {
+      throw error;
+    }
+  };
+  export const getResistorsByMultipler = async () => {
+    try {
+      const response = await instance.get('api/resistors/multiplers');
       return response.data;
     } catch (error) {
       throw error;
