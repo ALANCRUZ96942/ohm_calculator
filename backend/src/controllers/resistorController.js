@@ -36,12 +36,14 @@ exports.getResistorsByTolerance = async (req, res) => {
     res.status(500).json({ error: 'There was an error', error });
   }
 };
-/*Get the colors bands */
-exports.getResistorsByColors = async (req, res) => {
+/*Get the bands (figures)*/
+exports.getResistorsByFigure = async (req, res) => {
   try {
 
     const whereClause = {
-      tolerance: null, 
+      multipler: {
+        [Op.gte]: 1,
+      }, 
     };
     const attributes = ['name', 'color', 'multipler'];
 
@@ -57,6 +59,27 @@ exports.getResistorsByColors = async (req, res) => {
   }
 };
 
+/*Get the multipler bands */
+exports.getResistorsByMultipler = async (req, res) => {
+  try {
 
+    const whereClause = {
+      multipler: {
+        [Op.not]: null,
+      }, 
+    };
+    const attributes = ['name', 'color', 'multipler'];
+
+    const resistors = await Resistor.findAll({
+      where: whereClause,
+      attributes: attributes,
+    });
+    
+    res.status(200).json(resistors);
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: 'There was an error', error });
+  }
+};
 
 

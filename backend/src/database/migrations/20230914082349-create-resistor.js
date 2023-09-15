@@ -19,7 +19,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       tolerance: {
-        type: Sequelize.INTEGER,
+        type: Sequelize.FLOAT,
         allowNull: true,
       },
       createdAt: {

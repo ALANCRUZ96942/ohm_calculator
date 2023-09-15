@@ -5,5 +5,7 @@ const resistorController = require('../controllers/resistorController');
 
 router.get('/resistors', resistorController.getAllResistors);
 router.get('/resistors/tolerance', resistorController.getResistorsByTolerance);
-router.get('/resistors/colors', resistorController.getResistorsByColors);
+router.get('/resistors/colors', resistorController.getResistorsByFigures);
+router.get('/resistors/multiplers', resistorController.getResistorsByMultipler);
+
 module.exports = router;
