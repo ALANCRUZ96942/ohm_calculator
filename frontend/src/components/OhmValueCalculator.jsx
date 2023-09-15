@@ -148,8 +148,10 @@ function OhmValueCalculator(props) {
                 <div className='col-8'>
                     <div className='resistor d-flex justify-content-center'>
                     
-                        <animated.select className="input-custom-select" style={selectAnimation} onChange={(event) => handleColor(event.target.value,selectedButton)}>
-                        
+                        <animated.select  value={0} className="input-custom-select" style={selectAnimation} onChange={(event) => handleColor(event.target.value,selectedButton)}>
+                        <option>
+                            {'Select an color'}
+                        </option>
                         {
                             (selectedButton === props.tolerance ) ? 
                                 tolerances.map((tolerance, index) => (
@@ -184,7 +186,7 @@ function OhmValueCalculator(props) {
 
             <div className='row pt-5'>
                 <h3 className='text-white'>
-                    {finalResult !== null? 'Resistance: '+finalResult+'Ω ± '+finalTolerance : ''}
+                    {finalResult !== null? 'Resistance: '+finalResult+'Ω ± '+finalTolerance+'%' : ''}
                 </h3>
             </div>
 
