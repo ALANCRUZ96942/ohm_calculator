@@ -1,4 +1,4 @@
-# ohm_calculator
+# Ohm Calculator
 ## Clonning repository
 Clone the repository on your local:
 ```
