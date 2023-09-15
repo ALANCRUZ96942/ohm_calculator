@@ -5,7 +5,7 @@ import {  animated } from '@react-spring/web'
 function Resistence() {
     const [toleranceband, setToleranceband] = useState(4);
 
-    const numBands = ['4','5','6'];
+    const numBands = ['4','5'];
 
     function handleBand(a) {
         console.log(a);
