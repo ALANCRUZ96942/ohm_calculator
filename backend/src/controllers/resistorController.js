@@ -41,7 +41,7 @@ exports.getResistorsByColors = async (req, res) => {
   try {
 
     const whereClause = {
-      name: null, 
+      tolerance: null, 
     };
     const attributes = ['name', 'color', 'multipler'];
 
